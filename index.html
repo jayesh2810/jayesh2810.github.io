@@ -11,145 +11,39 @@
   .about-section {
     text-align: center;
     padding: 50px 0;
+    display: flex; /* Added to use Flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    min-height: 100vh; /* Makes section at least the height of the viewport */
   }
   .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
   .about-section img {
-    width: 200px; /* Adjust the size as needed */
+    width: 200px;
     height: 200px;
-    border-radius: 50%; /* Makes the image round */
+    border-radius: 50%;
     margin-bottom: 20px;
   }
   .about-section p {
     color: #333;
   }
 
- /* Additional CSS for Projects Section */
-.projects-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.card {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
-  display: flex;
-  flex-direction: column; /* Organizes the card content vertically */
-  height: 100%; /* Ensures card takes full height of its container */
-}
-.card-img-top {
-  max-height: 180px; /* Adjust this value to fit the image properly in the card */
-  object-fit: cover; /* This makes sure the image covers the area properly */
-}
-.card-body {
-  padding: 15px;
-  flex: 1; /* Allows card body to expand and fill available space */
-  display: flex;
-  flex-direction: column;
-}
-.card-title {
-  font-size: 1.25rem;
-}
-.card-text {
-  flex: 1; /* Ensures text section expands to fill space */
-  margin-bottom: 15px;
-}
-
-
-/* Additional CSS for Skills Section */
-.skills-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-.skills-section .card {
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-.skills-section .card-img-top {
-  padding: 20px; /* Add padding around your images if needed */
-  background-color: #f8f9fa; /* Adjust the background color if your images have transparent areas */
-  height: 180px; /* Fixed height for consistency */
-  object-fit: contain; /* This will make sure the image is scaled properly within the container */
-}
-.skills-section .card-body {
-  padding: 15px;
-}
-.skills-section .card-title {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-}
-.skills-section .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff;
-}
-.skills-section .btn-outline-primary:hover {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-/* Additional CSS for Contact Section */
-.contact-section {
-  padding: 50px 0;
-}
-.contact-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-.contact-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.social-icon {
-  width: 50px; /* Size of your Icons */
-  margin-bottom: 10px;
-}
-/* Hover effect for Icons */
-.social-icon:hover {
-  opacity: 0.7;
-}
-/* Style for links in the Contact section */
-.contact-section a {
-  color: #fff;
-  text-decoration: none; /* Removes underline from links */
-  display: inline-block; /* Allows for margin on the bottom */
-  margin-bottom: 10px;
-}
-.contact-section a:hover {
-  color: #ddd; /* Color when hovering over the link */
-}
-
-/* CSS for Sticky Navbar */
-.navbar {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a shadow for depth */
-}
-
-/* Ensure padding is added to body to avoid content being hidden behind the navbar */
-body { 
-  padding-top: 56px; /* Adjust this value based on the height of your navbar */
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Style for navigation bar links */
-.navbar-nav .nav-link {
-  color: white;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #f8f9fa; /* Slightly lighter white when hovering over links */
-}
-
-/* Media query for responsive navbar collapsing */
-@media (max-width: 992px) {
-  .navbar-collapse {
-    background-color: #343a40; /* Same as navbar color for seamless look */
+  /* Container specifically for the about-section to align content properly */
+  .about-section .container {
+    max-width: 800px; /* Restricts the container's width */
   }
-}
 
-
+  /* Additional CSS for other sections as originally provided */
+  /* Ensure your existing styles for other sections remain here to maintain the layout */
+  
+  /* Additional style changes */
+  body, html {
+    height: 100%; /* Needed to properly use 100vh */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
 </style>
 
 </head>
@@ -159,14 +53,11 @@ html {
   <div class="container">
     <h2>Welcome to my Portfolio!</h2>
     <img src="Images/About/Me2.jpeg" alt="About Me">
-    <div style="text-align: center; width: 100%;">
-      <p>Hello, I'm Jayesh, an experienced analytics professional skilled in extracting actionable insights from complex datasets across various sectors. I began my career at Course5i, a leader in market research, focusing on data pre-processing, statistical modeling, and applying advanced machine learning algorithms to improve business decisions. My projects have improved customer segmentation, pricing strategies, user retention, and market opportunity identification. My commitment to data-driven innovation and teamwork is evident in both my professional work and personal interests, including soccer and cooking, which enhance my teamwork skills and creativity.</p>
-      <p>Currently, I'm pursuing a Master’s in Data Science at the University of Connecticut, specializing in natural language processing, generative AI, and reinforcement learning. I aim to use these skills to solve real-world problems and aspire to become a leader and mentor in data science, using data to improve decision-making and create positive societal changes. I’m looking forward to collaborating with fellow enthusiasts and experts to make a significant impact.</p>
-          <a href="Jayesh Bhadane - Data scientist Resume.pdf" download="Jayesh Bhadane - Data scientist Resume.pdf" class="btn btn-primary">Download My Resume</a>
-    </div>    
+    <p>Hello, I'm Jayesh, an experienced analytics professional skilled in extracting actionable insights from complex datasets across various sectors. I began my career at Course5i, a leader in market research, focusing on data pre-processing, statistical modeling, and applying advanced machine learning algorithms to improve business decisions. My projects have improved customer segmentation, pricing strategies, user retention, and market opportunity identification. My commitment to data-driven innovation and teamwork is evident in both my professional work and personal interests, including soccer and cooking, which enhance my teamwork skills and creativity.</p>
+    <p>Currently, I'm pursuing a Master’s in Data Science at the University of Connecticut, specializing in natural language processing, generative AI, and reinforcement learning. I aim to use these skills to solve real-world problems and aspire to become a leader and mentor in data science, using data to improve decision-making and create positive societal changes. I’m looking forward to collaborating with fellow enthusiasts and experts to make a significant impact.</p>
+    <a href="Jayesh Bhadane - Data scientist Resume.pdf" download="Jayesh Bhadane - Data scientist Resume.pdf" class="btn btn-primary">Download My Resume</a>
   </div>
 </section>
-
 
 <!-- Projects Section -->
 <section id="projects" class="projects-section bg-light" id="projects">
@@ -406,3 +297,4 @@ html {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
