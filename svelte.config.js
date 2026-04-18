@@ -14,7 +14,7 @@ const config = {
 			strict: false
 		}),
 		paths: {
-			base: process.env.BASE_PATH ?? '/portfolio'
+			base: process.env.BASE_PATH ?? ''
 		},
 		prerender: {
 			handleHttpError: 'warn'
