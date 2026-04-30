@@ -31,7 +31,7 @@
 		{
 			company: 'C5i (Course5 Intelligence)',
 			role: 'Data Science Consultant',
-			dates: '2021–2023',
+			dates: '2020–2023',
 			description: 'Enterprise analytics for Fortune 500 clients. Customer segmentation, Bayesian marketing mix modeling, A/B testing, demand forecasting.',
 			tags: ['Product Analytics', 'Marketing Analytics', 'Segmentation', 'Statistical Modeling and Analysis', 'A/B Testing', 'Forecasting', 'Python', 'R']
 		}
