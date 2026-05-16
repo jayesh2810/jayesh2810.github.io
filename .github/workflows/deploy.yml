@@ -26,10 +26,11 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
+          CI: "true"
           BASE_PATH: ${{ endsWith(github.event.repository.name, '.github.io') && '' || format('/{0}', github.event.repository.name) }}
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: build
+          path: dist/client
 
   deploy:
     needs: build
