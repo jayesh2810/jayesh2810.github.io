@@ -24,15 +24,21 @@ export function Navbar() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all ${
-        scrolled
-          ? "backdrop-blur-md bg-background/75 border-b border-border"
-          : "bg-transparent"
+        scrolled ? "backdrop-blur-md bg-background/75 border-b border-border" : "bg-transparent"
       }`}
     >
       <nav className="container-page flex h-16 items-center justify-between">
-        <a href="#top" className="font-display text-lg font-semibold tracking-tight">
-          {portfolio.initials}
-          <span className="text-primary">.</span>
+        <a
+          href="#top"
+          className="flex items-center shrink-0 rounded-lg overflow-hidden ring-1 ring-border/60 bg-background hover:opacity-90 transition"
+          aria-label={`${portfolio.name} home`}
+        >
+          <img
+            src={portfolio.brandLogoUrl}
+            alt=""
+            className="h-9 w-auto max-h-9 object-contain object-left px-1.5 py-0.5"
+            decoding="async"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

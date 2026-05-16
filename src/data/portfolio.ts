@@ -1,6 +1,7 @@
 export const portfolio = {
   name: "Jayesh Bhadane",
   initials: "JB",
+  brandLogoUrl: "/4dfbe36b-bbbb-42fc-92db-d5cad0bd9162.png",
   title: "Data Scientist & Machine Learning Engineer",
   tagline:
     "Building AI systems and analytics that turn messy data into measurable outcomes: from agentic workflows to deep-learning models.",
