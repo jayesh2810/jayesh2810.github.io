@@ -13,15 +13,14 @@ export default function Resume() {
     lines.push('');
     lines.push('SUMMARY');
     lines.push(
-      'Data scientist and ML engineer in the Bay Area. Five years across enterprise analytics, applied deep learning, and production AI systems — at the intersection of "does this work?" and "does this matter?"',
+      'Data scientist and ML engineer in Los Angeles. Five years across enterprise analytics, applied deep learning, and production AI systems, always asking two questions: "does this work?" and "does this matter?"',
     );
     lines.push('');
     lines.push('EXPERIENCE');
     for (const j of JOBS) {
       lines.push('');
-      lines.push(`${j.role} — ${j.org}  (${j.period})`);
+      lines.push(`${j.role} · ${j.org}  (${j.period})`);
       lines.push(j.summary);
-      for (const p of j.points) lines.push(`  • ${p}`);
     }
     lines.push('');
     lines.push('EDUCATION');
@@ -35,10 +34,10 @@ export default function Resume() {
     }
     lines.push('');
     lines.push('SKILLS');
-    lines.push('ML & Statistics: Logistic/linear regression, clustering, GLMs, decision trees, dimensionality reduction, deep learning, NLP, time series, hypothesis testing, A/B testing');
-    lines.push('LLMs & Agents: Python, LangChain, LangGraph, LlamaIndex, LiteLLM, Google ADK, agentic AI, generative AI, RAG pipelines');
+    lines.push('ML & Statistics: Logistic/linear regression, clustering, GLMs, Bayesian modeling, decision trees, dimensionality reduction, deep learning, NLP, time series, hypothesis testing, A/B testing');
+    lines.push('LLMs & Agents: LangChain, LangGraph, LlamaIndex, LiteLLM, Google ADK, Pydantic, agentic AI, generative AI, RAG pipelines, eval & observability');
     lines.push('Platforms: SQL, R, Spark, Docker, GCP, Azure, AWS, Airflow, Databricks');
-    lines.push('Frameworks: PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, pandas, NumPy, statsmodels, FastAPI, Svelte, Plotly, Tableau, PowerBI');
+    lines.push('Frameworks: PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, PyMC, Prophet, pandas, NumPy, statsmodels, FastAPI, Svelte, Plotly, Tableau, PowerBI');
 
     const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
@@ -78,10 +77,9 @@ export default function Resume() {
         <section>
           <h2 className="font-mono text-[12px] uppercase tracking-[0.3em] text-rust">Summary</h2>
           <p className="mt-3 text-[15px] leading-relaxed text-inksoft">
-            Data scientist and ML engineer in the Bay Area. Five years across enterprise analytics,
-            applied deep learning, and production AI systems — from agentic workflows to NASA
-            satellite telemetry models, always at the intersection of “does this actually work?”
-            and “does this actually matter?”
+            Data scientist and ML engineer in Los Angeles. Five years across enterprise analytics,
+            applied deep learning, and production AI systems, always asking two questions:
+            “does this actually work?” and “does this actually matter?”
           </p>
         </section>
 
@@ -95,14 +93,6 @@ export default function Resume() {
                     {j.role} · {j.org}
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-inksoft">{j.summary}</p>
-                  <ul className="mt-3 space-y-2">
-                    {j.points.map((p) => (
-                      <li key={p} className="flex gap-2.5 text-sm leading-relaxed text-inksoft">
-                        <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rotate-45 bg-rust" aria-hidden="true" />
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
                 <p className="whitespace-nowrap font-mono text-[11.5px] uppercase tracking-[0.1em] text-inksoft">
                   {j.period}
@@ -146,10 +136,10 @@ export default function Resume() {
         <section>
           <h2 className="font-mono text-[12px] uppercase tracking-[0.3em] text-rust">Skills</h2>
           <div className="mt-4 space-y-1.5 text-sm leading-relaxed text-inksoft">
-            <p><span className="font-semibold text-ink">ML & Statistics:</span> logistic / linear regression, clustering, GLMs, decision trees, dimensionality reduction, deep learning, NLP, time series, hypothesis testing, A/B testing.</p>
-            <p><span className="font-semibold text-ink">LLMs & Agents:</span> Python, LangChain, LangGraph, LlamaIndex, LiteLLM, Google ADK, agentic AI, generative AI, RAG pipelines, eval & observability.</p>
+            <p><span className="font-semibold text-ink">ML & Statistics:</span> logistic / linear regression, clustering, GLMs, Bayesian modeling, decision trees, dimensionality reduction, deep learning, NLP, time series, hypothesis testing, A/B testing.</p>
+            <p><span className="font-semibold text-ink">LLMs & Agents:</span> LangChain, LangGraph, LlamaIndex, LiteLLM, Google ADK, Pydantic, agentic AI, generative AI, RAG pipelines, eval & observability.</p>
             <p><span className="font-semibold text-ink">Languages & Platforms:</span> SQL, R, Spark, Docker, GCP, Azure, AWS, Airflow, Databricks.</p>
-            <p><span className="font-semibold text-ink">Frameworks:</span> PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, pandas, NumPy, statsmodels, FastAPI, Svelte, Plotly, Tableau, PowerBI.</p>
+            <p><span className="font-semibold text-ink">Frameworks:</span> PyTorch, TensorFlow, Keras, scikit-learn, XGBoost, PyMC, Prophet, pandas, NumPy, statsmodels, FastAPI, Svelte, Plotly, Tableau, PowerBI.</p>
           </div>
         </section>
 

@@ -58,10 +58,10 @@ export default function PortraitArt({ className = '' }: { className?: string }) 
       <CropMark x={458} y={578} />
 
       <text x="46" y="34" fontFamily="'IBM Plex Mono', monospace" fontSize="11.5" letterSpacing="1.5" fill="#1A1714" opacity="0.75">
-        37.4419° N / 122.1430° W
+        34.0522° N / 118.2437° W
       </text>
       <text x="434" y="34" textAnchor="end" fontFamily="'IBM Plex Mono', monospace" fontSize="11.5" letterSpacing="1.5" fill="#1A1714" opacity="0.75">
-        FIELD PRINT — 2026
+        FIELD PRINT 6
       </text>
 
       {/* misregistered print circles */}
@@ -140,8 +140,8 @@ export default function PortraitArt({ className = '' }: { className?: string }) 
       {/* caption plate */}
       <rect x="0" y="552" width="480" height="48" fill="#1A1714" />
       <rect x="0" y="552" width="480" height="3" fill="#C2410C" />
-      <text x="24" y="581" fontFamily="'IBM Plex Mono', monospace" fontSize="12.5" letterSpacing="2.5" fill="#F6F1E7">
-        FIG. 01 — JAYESH B. · DATA SCIENTIST &amp; ML ENGINEER
+      <text x="24" y="581" fontFamily="'IBM Plex Mono', monospace" fontSize="10" letterSpacing="1" fill="#F6F1E7">
+        FIG. 01 · JAYESH BHADANE · DATA SCIENTIST &amp; AI/ML ENGINEER
       </text>
     </svg>
   );

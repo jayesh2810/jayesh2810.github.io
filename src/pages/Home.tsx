@@ -102,8 +102,8 @@ export default function Home() {
               <span>
                 {typed}
                 <span className="caret -mb-1 ml-0.5 inline-block h-[1em] w-[8px] bg-rust align-middle" />
-              </span>{' '}
-              — from agentic workflows to deep-learning models, always at the intersection of{' '}
+              </span>
+              , from agentic workflows to deep learning models, always asking two questions:{' '}
               <span className="font-semibold text-ink">does it work?</span> and{' '}
               <span className="font-semibold text-ink">does it matter?</span>
             </p>
@@ -171,31 +171,31 @@ export default function Home() {
               <h2 className="font-serif text-4xl font-black leading-[1.05] tracking-tight md:text-5xl">A quick intro.</h2>
               <div className="ruled mt-7 space-y-5 text-[15.5px] leading-[2.3] text-inksoft">
                 <p>
-                  I'm a data scientist and ML engineer based in the Bay Area. I've spent five years
-                  working across enterprise analytics, applied deep learning, and production AI
-                  systems — always at the intersection of{' '}
+                  I'm a data scientist and ML engineer based in Los Angeles. I've spent five years
+                  across enterprise analytics, applied deep learning, and production AI systems,
+                  and I keep coming back to two questions:{' '}
                   <span className="bg-cream px-1 font-semibold text-ink">does this actually work?</span>{' '}
                   and{' '}
                   <span className="bg-cream px-1 font-semibold text-ink">does this actually matter?</span>
                 </p>
                 <p>
                   At <span className="font-semibold text-ink">C5i</span>, I worked with Fortune 500
-                  teams on customer segmentation, marketing mix modeling, and A/B testing — the
-                  kind of work where a well-framed question matters more than a complex model.
-                  At <span className="font-semibold text-ink">Aurora Engineering</span>, I shifted
-                  to spaceflight telemetry for NASA's MMS mission, building pipelines to recover
-                  missing data from satellite instruments. Most recently at{' '}
-                  <span className="font-semibold text-ink">Skan AI</span>, I've been building
-                  agentic AI systems, LLM pipelines, and multi-agent architectures.
+                  teams on Bayesian marketing mix modeling, forecasting, segmentation, and A/B
+                  testing. That's the kind of work where a well-framed question beats a complex
+                  model. At <span className="font-semibold text-ink">Aurora Engineering</span>, I
+                  moved to spaceflight data, using deep learning to recover corrupted plasma sensor
+                  telemetry from NASA's MMS mission. Most recently at{' '}
+                  <span className="font-semibold text-ink">Skan AI</span>, I built an agentic
+                  insurance platform with LLM agents, schema-checked outputs, and an eval loop.
                 </p>
                 <p>
-                  I have a Master's in Data Science from UConn. What I care about most is solving
-                  problems that sit at the intersection of data, product thinking, and
-                  decision-making — and shipping solutions that hold up in the real world.
+                  I have a Master's in Data Science from UConn. I care most about problems where
+                  data, product thinking, and real decisions meet, and about shipping work that
+                  holds up once real people use it.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                {['UConn MS, Data Science — GPA 3.78', 'B.E. Computer Engineering, U. Mumbai'].map((c) => (
+                {['UConn MS, Data Science · GPA 3.78', 'B.E. Computer Engineering, U. Mumbai'].map((c) => (
                   <span key={c} className="ink-border-tight inline-flex items-center bg-paper px-3.5 py-2 font-mono text-[11.5px] uppercase tracking-[0.08em]">
                     {c}
                   </span>
@@ -211,7 +211,7 @@ export default function Home() {
                   A well-framed question matters more than a complex model.
                 </blockquote>
                 <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.22em] text-paper/60">
-                  — the working principle behind every engagement
+                  The working principle behind every engagement
                 </p>
                 <div className="mt-8 grid grid-cols-3 gap-px border-2 border-paper/25 bg-paper/25">
                   {[
@@ -240,22 +240,22 @@ export default function Home() {
               Four models. <span className="italic text-rust">Zero</span> abandoned notebooks.
             </h2>
             <p className="max-w-sm font-mono text-[12px] leading-relaxed text-inksoft">
-              Every model below trains live in your browser — gradient descent, k-means, PCA, and a
-              from-scratch MLP. Drag points. Watch loss curves move.
+              Every model below trains live in your browser: gradient descent, k-means, PCA, and a
+              from-scratch MLP. Drag points. Watch the loss curve move.
             </p>
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
-            <NotebookCell index="A" title="Logistic Regression" subtitle="Binary classifier · gradient descent from scratch" blurb="The model behind a million churn predictions — trained here, live, with hand-rolled gradient descent. Drag a point across the line to flip its label." accent="rust">
+            <NotebookCell index="A" title="Logistic Regression" subtitle="Binary classifier · gradient descent from scratch" blurb="The model behind a million churn predictions, trained here live with hand-rolled gradient descent. Drag a point across the line to flip its label." accent="rust">
               <LogisticDemo />
             </NotebookCell>
-            <NotebookCell index="B" title="K-Means" subtitle="Clustering · k-means++ seeding" blurb="Given pure noise, this finds three segments. Drag an × centroid and watch every assignment — and color — react in real time." accent="navy">
+            <NotebookCell index="B" title="K-Means" subtitle="Clustering · k-means++ seeding" blurb="Three hidden groups, no labels. Drag an × centroid and watch every assignment and color react in real time." accent="navy">
               <KmeansDemo />
             </NotebookCell>
             <NotebookCell index="C" title="PCA" subtitle="Dimensionality reduction · first principal component" blurb="The first principal component is the direction of maximum variance. The scatter projects onto that direction in the strip below, live." accent="teal">
               <PcaDemo />
             </NotebookCell>
-            <NotebookCell index="D" title="MLP from Scratch" subtitle="2 → 16 → 8 → 1 · backprop on a micro-batch" blurb="A tiny multilayer perceptron with hand-written backpropagation — the math libraries hide from you. Press run and watch the loss curve fall." accent="gold">
+            <NotebookCell index="D" title="MLP from Scratch" subtitle="2 → 16 → 8 → 1 · backprop on a micro-batch" blurb="A tiny multilayer perceptron with hand-written backpropagation, the math that libraries hide from you. Press run and watch the loss curve fall." accent="gold">
               <MlpDemo />
             </NotebookCell>
           </div>
@@ -297,7 +297,7 @@ export default function Home() {
                   <a
                     href={a.link.href}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="mt-5 inline-flex items-center gap-1.5 font-mono text-[11.5px] uppercase tracking-[0.16em] text-rust hover:underline"
                   >
                     {a.link.label} <ArrowRight className="h-3.5 w-3.5" />
@@ -351,7 +351,7 @@ export default function Home() {
                 Let's build something that holds up, together.
               </h2>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-paper/85">
-                Roles, projects, collaborations — my inbox is open and I read everything.
+                Roles, projects, collaborations: my inbox is open and I read everything.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -431,24 +431,7 @@ function JobCard({ job }: { job: Job }) {
           <h3 className="mt-2 font-serif text-2xl font-black tracking-tight md:text-[1.7rem]">{job.role}</h3>
           <p className="mt-1 max-w-2xl text-sm leading-relaxed text-inksoft">{job.summary}</p>
         </div>
-        {job.current && (
-          <span className="flex items-center gap-2 border-2 border-ink bg-teal px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.14em] text-paper">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute h-full w-full animate-ping rounded-full bg-paper opacity-70" />
-              <span className="relative h-2 w-2 rounded-full bg-paper" />
-            </span>
-            Current
-          </span>
-        )}
       </div>
-      <ul className="mt-5 space-y-2.5">
-        {job.points.map((p) => (
-          <li key={p} className="flex gap-3 text-sm leading-relaxed text-inksoft">
-            <span className="mt-[7px] h-2 w-2 shrink-0 rotate-45 bg-rust" aria-hidden="true" />
-            {p}
-          </li>
-        ))}
-      </ul>
       <div className="mt-5 flex flex-wrap gap-2">
         {job.tags.map((t) => (
           <span key={t} className="border border-ink/40 bg-cream px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.1em] text-inksoft">

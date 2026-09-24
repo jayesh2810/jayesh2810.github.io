@@ -86,7 +86,7 @@ export default function Contact() {
               </li>
               <li>
                 <a href={GITHUB} target="_blank" rel="noreferrer" className="underline decoration-rustbright decoration-2 underline-offset-4 hover:text-rustbright">
-                  GitHub — jayesh281998
+                  GitHub · jayesh2810
                 </a>
               </li>
             </ul>

@@ -1,9 +1,9 @@
 export const EMAIL = 'jayesh281998@gmail.com';
 export const PHONE = '+1 (860) 934-8059';
 export const PHONE_TEL = '+18609348059';
-export const LOCATION = 'Palo Alto, CA';
+export const LOCATION = 'Los Angeles, CA';
 export const LINKEDIN = 'https://www.linkedin.com/in/jayesh-bhadane';
-export const GITHUB = 'https://github.com/jayesh281998';
+export const GITHUB = 'https://github.com/jayesh2810';
 
 export interface Job {
   role: string;
@@ -12,9 +12,7 @@ export interface Job {
   period: string;
   start: string;
   end: string;
-  current?: boolean;
   summary: string;
-  points: string[];
   tags: string[];
 }
 
@@ -22,66 +20,35 @@ export const JOBS: Job[] = [
   {
     role: 'Machine Learning Engineer',
     org: 'Skan AI',
-    orgNote: 'Building an agentic AI platform that automates business processes end-to-end.',
-    period: 'Dec 2025 — Present',
+    orgNote: 'Built an agentic insurance platform where LLM agents move a submission from intake to decision.',
+    period: 'Dec 2025 to Apr 2026',
     start: '2025-12',
-    end: '2026-09',
-    current: true,
+    end: '2026-04',
     summary:
-      'Building an agentic AI platform that automates business processes end-to-end — LLM agents that read the org chart, draft the SOWs, chase the data, and write the status updates.',
-    points: [
-      'Designed a multi-agent orchestration layer on LangGraph with tool-calling contracts and deterministic retry/eval loops.',
-      'Shipped LLM pipelines that turn messy CRM exports into decision-ready summaries, with human-in-the-loop checkpoints.',
-      'Cut manual ops work by routing 60%+ of routine business-process steps through verified agent chains.',
-    ],
-    tags: ['LangGraph', 'LLM Pipelines', 'Agentic AI', 'Evals'],
+      'Built an agentic insurance platform where LLM agents move a submission from intake to decision. Added schema checks and an eval loop to keep the agents reliable, and cut cycle time on those workflows by roughly 70 to 80%.',
+    tags: ['Google ADK', 'Agentic AI', 'Evals', 'FastAPI'],
   },
   {
     role: 'Data Scientist',
     org: 'Aurora Engineering',
-    orgNote: "Used ML, deep learning and time series models to recover corrupt data from NASA's MMS satellite telemetry.",
-    period: 'Aug 2024 — Dec 2025',
+    orgNote: "Used deep learning and time series models to recover corrupted plasma sensor data from NASA's MMS satellite mission.",
+    period: 'Aug 2024 to Dec 2025',
     start: '2024-08',
     end: '2025-12',
     summary:
-      "Used ML, deep learning and time series models to recover corrupt data from NASA's MMS satellite telemetry — 17M+ points modeled.",
-    points: [
-      'Built imputation and anomaly-detection pipelines for bit-rot and dropout corruption in MMS magnetometer telemetry.',
-      'Recovered 17M+ missing or garbled data points without inventing physics — every imputed value ships with an uncertainty score.',
-      'Deployed batch + streaming evaluation harness so recovered datasets could be validated against spacecraft models.',
-    ],
-    tags: ['Time Series', 'Deep Learning', 'NASA MMS', 'Data Quality'],
+      "Used deep learning and time series models to recover corrupted plasma sensor data from NASA's MMS satellite mission, reaching an R² of 0.98.",
+    tags: ['Deep Learning', 'Time Series', 'NASA MMS', 'Data Quality'],
   },
   {
-    role: 'Sr. Data Scientist',
+    role: 'Data Scientist, then Sr. Data Scientist',
     org: 'C5i',
-    orgNote: 'Worked as a data science consultant for clients: segmentation, forecasting and marketing-mix modeling.',
-    period: 'Oct 2022 — Aug 2023',
-    start: '2022-10',
+    orgNote: 'Data science consulting for Fortune 500 clients: segmentation, forecasting, NLP, and Bayesian marketing mix modeling.',
+    period: 'Oct 2020 to Aug 2023',
+    start: '2020-10',
     end: '2023-08',
     summary:
-      'Data science consulting for Fortune 500 clients: customer segmentation, forecasting, and marketing-mix modeling where a well-framed question mattered more than a complex model.',
-    points: [
-      'Delivered frequency-severity GLM models for large insurance books (Kaggle First Place, 2024 follow-on work).',
-      'Built marketing-mix models that survived budget-cycle scrutiny — reported with confidence intervals, not point estimates.',
-      'Two Star of the Quarter awards for exceeding role expectations.',
-    ],
-    tags: ['Marketing Mix', 'A/B Testing', 'GLMs', 'Consulting'],
-  },
-  {
-    role: 'Data Scientist',
-    org: 'C5i',
-    orgNote: 'Consulted on funnel analysis, assisted with segmentation, and reporting automation across client engagements.',
-    period: 'Oct 2020 — Sep 2022',
-    start: '2020-10',
-    end: '2022-09',
-    summary:
-      'Consulted on funnel analysis, assisted with segmentation, and automated reporting across client engagements.',
-    points: [
-      'Shipped self-serve reporting infrastructure that replaced weekly analyst hand-offs.',
-      'Led funnel and cohort analyses that became client-facing decision documents.',
-    ],
-    tags: ['SQL', 'Segmentation', 'Reporting'],
+      'Consulted for Fortune 500 clients in tourism, automotive, and beverages. Used customer segmentation to shape targeted marketing, built time series forecasts, and applied NLP to patient-doctor data for a healthcare client. Later built Bayesian marketing mix models to show where marketing budget actually paid off.',
+    tags: ['Segmentation', 'Forecasting', 'NLP', 'Marketing Mix'],
   },
 ];
 
@@ -123,11 +90,12 @@ export interface Achievement {
 export const ACHIEVEMENTS: Achievement[] = [
   {
     title: 'Travelers Insurance Case Competition',
-    org: 'Kaggle · 2024',
-    year: '2024',
+    org: 'Kaggle · 2023',
+    year: '2023',
     headline: 'First place, frequency-severity modeling',
     body:
-      'Secured first place in a Kaggle competition by developing a frequency-severity model using generalized linear models to predict claim costs — severity modeled with zero-inflated gamma GLMs, frequency with gradient-boosted trees.',
+      'Won first place predicting auto insurance claim cost per policy with a two-step model: a Poisson GLM for claim frequency and a Gamma GLM for severity, scored on normalized Gini with 10-fold cross validation.',
+    link: { label: 'See the code', href: 'https://github.com/jayesh2810/2023-Travelers-Analytics-Case-Competition' },
     stat: { label: 'Prize', value: '1st' },
   },
   {
@@ -136,7 +104,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     year: '2023',
     headline: 'Awarded twice for exceeding expectations',
     body:
-      'Awarded Star of the Quarter twice at C5i for exceeding role expectations — cited for model quality and the clarity with which results were communicated to senior stakeholders.',
+      'Awarded twice at C5i for exceeding role expectations, cited for model quality and for explaining results clearly to senior stakeholders.',
     stat: { label: 'Awards', value: '2×' },
   },
   {
@@ -157,6 +125,7 @@ export const SKILLS: { group: string; items: string[] }[] = [
       'Logistic / Linear Regression',
       'Clustering',
       'GLMs',
+      'Bayesian Modeling',
       'Decision Trees',
       'Dimensionality Reduction',
       'Deep Learning',
@@ -169,12 +138,12 @@ export const SKILLS: { group: string; items: string[] }[] = [
   {
     group: 'LLMs & Agents',
     items: [
-      'Python',
       'LangChain',
       'LangGraph',
       'LlamaIndex',
       'LiteLLM',
       'Google ADK',
+      'Pydantic',
       'Agentic AI',
       'Generative AI',
       'RAG Pipelines',
@@ -193,6 +162,8 @@ export const SKILLS: { group: string; items: string[] }[] = [
       'Keras',
       'Scikit-Learn',
       'XGBoost',
+      'PyMC',
+      'Prophet',
       'Pandas',
       'NumPy',
       'Statsmodels',
