@@ -1,0 +1,212 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-paper: #f6f1e7;
+  --color-cream: #efe7d6;
+  --color-sand: #e4d9c0;
+  --color-ink: #1a1714;
+  --color-inksoft: #4a4438;
+  --color-rust: #c2410c;
+  --color-rustbright: #ea580c;
+  --color-ochre: #b8860b;
+  --color-gold: #d4a017;
+  --color-teal: #0f766e;
+  --color-skyblue: #1d4ed8;
+  --color-navy: #14202e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-rust);
+  color: var(--color-paper);
+}
+
+/* ---------- halftone dot field (print texture) ---------- */
+.dotfield {
+  background-image: radial-gradient(var(--dot, rgba(26, 23, 20, 0.10)) 1px, transparent 1.5px);
+  background-size: 9px 9px;
+}
+.dotfield-lg {
+  background-image: radial-gradient(var(--dot, rgba(26, 23, 20, 0.14)) 1.6px, transparent 2.2px);
+  background-size: 14px 14px;
+}
+.dotfield-light {
+  background-image: radial-gradient(var(--dot, rgba(246, 241, 231, 0.28)) 1.4px, transparent 2px);
+  background-size: 12px 12px;
+}
+
+/* ---------- ruled paper / data-grid lines ---------- */
+.ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 35px,
+    rgba(29, 78, 216, 0.12) 35px,
+    rgba(29, 78, 216, 0.12) 36px
+  );
+}
+.verticals {
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent calc(100% / 12 - 1px),
+    rgba(26, 23, 20, 0.05) calc(100% / 12 - 1px),
+    rgba(26, 23, 20, 0.05) calc(100% / 12)
+  );
+}
+
+/* ---------- sketchy hand-drawn borders ---------- */
+.ink-border {
+  border: 2px solid var(--color-ink);
+  border-radius: 14px 4px 16px 6px / 6px 16px 4px 14px;
+}
+.ink-border-tight {
+  border: 1.5px solid var(--color-ink);
+  border-radius: 10px 3px 12px 4px / 4px 12px 3px 10px;
+}
+
+.hard-shadow {
+  box-shadow: 5px 5px 0 0 var(--color-ink);
+}
+.hard-shadow-sm {
+  box-shadow: 3px 3px 0 0 var(--color-ink);
+}
+.hard-shadow-rust {
+  box-shadow: 5px 5px 0 0 var(--color-rust);
+}
+
+.press {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.press:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 0 var(--color-ink);
+}
+.press:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 var(--color-ink);
+}
+
+/* ---------- stamp effect ---------- */
+.stamp {
+  border: 3px double currentColor;
+  border-radius: 6px 10px 5px 12px / 10px 5px 12px 6px;
+  transform: rotate(-3deg);
+  letter-spacing: 0.12em;
+}
+
+/* ---------- underline draw on hover for nav ---------- */
+.navlink {
+  position: relative;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 3px;
+  width: 0%;
+  background: var(--color-rust);
+  transition: width 0.22s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.navlink:hover::after,
+.navlink.active::after {
+  width: 100%;
+}
+
+/* ---------- marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 46s linear infinite;
+  will-change: transform;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- blink / typing ---------- */
+@keyframes blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0; }
+}
+.caret {
+  animation: blink 1.06s steps(1) infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+.floaty {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+/* ---------- paper tape ---------- */
+.tape {
+  background: linear-gradient(105deg, rgba(214, 184, 120, 0.85), rgba(228, 204, 145, 0.9) 45%, rgba(206, 174, 108, 0.85));
+  box-shadow: 0 1px 3px rgba(26, 23, 20, 0.25);
+  opacity: 0.92;
+}
+
+/* ---------- range slider ---------- */
+input[type="range"].dial {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 99px;
+  background: var(--color-ink);
+  outline: none;
+}
+input[type="range"].dial::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 3px solid var(--color-ink);
+  box-shadow: 2px 2px 0 0 var(--color-ink);
+  cursor: grab;
+}
+input[type="range"].dial::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-paper);
+  border: 3px solid var(--color-ink);
+  box-shadow: 2px 2px 0 0 var(--color-ink);
+  cursor: grab;
+}
+
+/* thin scrollbar for code blocks */
+.codescroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.codescroll::-webkit-scrollbar-thumb {
+  background: rgba(246, 241, 231, 0.25);
+  border-radius: 99px;
+}
+.codescroll::-webkit-scrollbar-track {
+  background: rgba(246, 241, 231, 0.06);
+}
+
+/* expose current year color niceties */
+.text-balance { text-wrap: balance; }
