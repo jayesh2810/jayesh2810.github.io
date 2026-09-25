@@ -36,7 +36,7 @@ export const JOBS: Job[] = [
     start: '2024-08',
     end: '2025-12',
     summary:
-      "Used deep learning and time series models to recover corrupted plasma sensor data from NASA's MMS satellite mission, reaching an R² of 0.98.",
+      "Used deep learning and time series models to recover corrupted plasma sensor data from NASA's MMS satellite mission, reaching an R² of 0.86.",
     tags: ['Deep Learning', 'Time Series', 'NASA MMS', 'Data Quality'],
   },
   {
