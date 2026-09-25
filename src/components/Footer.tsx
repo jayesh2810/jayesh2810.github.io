@@ -11,7 +11,7 @@ export default function Footer() {
               Jayesh B<span className="text-rustbright">.</span>
             </p>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-paper/70">
-              Data scientist &amp; ML engineer building agentic AI systems and analytics that turn
+              Data scientist &amp; ML engineer building analytics and agentic AI systems that turn
               messy data into measurable outcomes.
             </p>
           </div>

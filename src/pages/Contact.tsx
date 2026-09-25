@@ -23,8 +23,7 @@ export default function Contact() {
         Have a role, project, or collaboration in mind?
       </h1>
       <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-inksoft">
-        I'm open to ML engineering, data science, and applied AI opportunities. The fastest way to
-        reach me is email — I usually reply within a day.
+        The fastest way to reach me is email. I usually reply within a day.
       </p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">

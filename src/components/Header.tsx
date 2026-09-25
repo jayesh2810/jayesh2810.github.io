@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X, FileDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { JBMark } from './Bits';
 import { useActiveSection } from '../hooks/useActiveSection';
 
@@ -44,20 +44,6 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <span className="hidden items-center gap-2 rounded-full border-2 border-ink bg-cream px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.12em] md:inline-flex">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-teal opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-teal" />
-            </span>
-            Open to opportunities
-          </span>
-          <Link
-            to="/resume"
-            className="press hidden items-center gap-2 border-2 border-ink bg-ink px-4 py-2 font-mono text-[12px] uppercase tracking-[0.14em] text-paper shadow-[3px_3px_0_0_var(--color-rust)] sm:inline-flex"
-          >
-            <FileDown className="h-4 w-4" />
-            Resume
-          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -91,13 +77,6 @@ export default function Header() {
                   {n.label}
                 </a>
               ))}
-              <Link
-                to="/resume"
-                className="mt-2 flex items-center justify-center gap-2 border-2 border-ink bg-ink px-4 py-3 font-mono text-sm uppercase tracking-[0.14em] text-paper"
-                onClick={() => setOpen(false)}
-              >
-                <FileDown className="h-4 w-4" /> Resume
-              </Link>
             </div>
           </motion.nav>
         )}

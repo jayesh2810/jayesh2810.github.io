@@ -13,7 +13,7 @@ export default function Resume() {
     lines.push('');
     lines.push('SUMMARY');
     lines.push(
-      'Data scientist and ML engineer in Los Angeles. Five years across enterprise analytics, applied deep learning, and production AI systems, always asking two questions: "does this work?" and "does this matter?"',
+      'Data scientist and ML engineer in Los Angeles. Five years across enterprise analytics, applied deep learning, and agentic AI systems, always asking two questions: "does this work?" and "does this matter?"',
     );
     lines.push('');
     lines.push('EXPERIENCE');
@@ -78,7 +78,7 @@ export default function Resume() {
           <h2 className="font-mono text-[12px] uppercase tracking-[0.3em] text-rust">Summary</h2>
           <p className="mt-3 text-[15px] leading-relaxed text-inksoft">
             Data scientist and ML engineer in Los Angeles. Five years across enterprise analytics,
-            applied deep learning, and production AI systems, always asking two questions:
+            applied deep learning, and agentic AI systems, always asking two questions:
             “does this actually work?” and “does this actually matter?”
           </p>
         </section>

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowDown, ArrowRight, Mail, MapPin } from 'lucide-react';
 import PortraitArt from '../components/PortraitArt';
-import { Marquee, Stamp } from '../components/Bits';
+import { Marquee } from '../components/Bits';
 import { EMAIL, LOCATION, STATS, JOBS, ACHIEVEMENTS, SKILLS } from '../data';
 import type { Job } from '../data';
 import Canvas2D from '../components/Canvas2D';
@@ -64,10 +64,9 @@ function useTypewriter(lines: string[], typingMs = 46, pauseMs = 1500) {
 /* =================================== HOME =================================== */
 
 const TYPE_LINES = [
-  'building agentic AI systems',
   'recovering corrupted satellite telemetry',
-  'modeling claims risk at scale',
-  'shipping LLM pipelines to production',
+  'building agentic AI systems',
+  'shipping LLM pipelines',
 ];
 
 export default function Home() {
@@ -103,7 +102,7 @@ export default function Home() {
                 {typed}
                 <span className="caret -mb-1 ml-0.5 inline-block h-[1em] w-[8px] bg-rust align-middle" />
               </span>
-              , from agentic workflows to deep learning models, always asking two questions:{' '}
+              , from deep learning models to agentic workflows, always asking two questions:{' '}
               <span className="font-semibold text-ink">does it work?</span> and{' '}
               <span className="font-semibold text-ink">does it matter?</span>
             </p>
@@ -140,7 +139,6 @@ export default function Home() {
               <PortraitArt className="block w-full" />
               <div className="tape absolute -top-4 left-1/2 h-8 w-28 -translate-x-1/2 rotate-[-2deg]" aria-hidden="true" />
             </div>
-            <Stamp className="absolute -right-3 -top-6 bg-paper sm:-right-8">Available for new reqs</Stamp>
           </div>
         </div>
 
@@ -172,7 +170,7 @@ export default function Home() {
               <div className="ruled mt-7 space-y-5 text-[15.5px] leading-[2.3] text-inksoft">
                 <p>
                   I'm a data scientist and ML engineer based in Los Angeles. I've spent five years
-                  across enterprise analytics, applied deep learning, and production AI systems,
+                  across enterprise analytics, applied deep learning, and agentic AI systems,
                   and I keep coming back to two questions:{' '}
                   <span className="bg-cream px-1 font-semibold text-ink">does this actually work?</span>{' '}
                   and{' '}
@@ -180,13 +178,14 @@ export default function Home() {
                 </p>
                 <p>
                   At <span className="font-semibold text-ink">C5i</span>, I worked with Fortune 500
-                  teams on Bayesian marketing mix modeling, forecasting, segmentation, and A/B
-                  testing. That's the kind of work where a well-framed question beats a complex
-                  model. At <span className="font-semibold text-ink">Aurora Engineering</span>, I
+                  teams on marketing and product analytics, with a focus on segmentation,
+                  forecasting, key driver analysis, and experimentation. That's the kind of work
+                  where a well-framed question beats a complex model. At <span className="font-semibold text-ink">Aurora Engineering</span>, I
                   moved to spaceflight data, using deep learning to recover corrupted plasma sensor
                   telemetry from NASA's MMS mission. Most recently at{' '}
-                  <span className="font-semibold text-ink">Skan AI</span>, I built an agentic
-                  insurance platform with LLM agents, schema-checked outputs, and an eval loop.
+                  <span className="font-semibold text-ink">Skan AI</span>, I helped build an
+                  agentic insurance platform with LLM agents, schema-checked outputs, and an eval
+                  loop.
                 </p>
                 <p>
                   I have a Master's in Data Science from UConn. I care most about problems where
@@ -317,7 +316,7 @@ export default function Home() {
             <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
               <h2 className="font-serif text-4xl font-black leading-[1.02] tracking-tight md:text-5xl">Tools I reach for to ship.</h2>
               <p className="max-w-sm font-mono text-[12px] leading-relaxed text-paper/60">
-                From classical ML and statistics to modern agentic AI stacks and production infrastructure.
+                From classical ML and statistics to modern agentic AI stacks and infrastructure.
               </p>
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

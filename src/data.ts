@@ -47,8 +47,8 @@ export const JOBS: Job[] = [
     start: '2020-10',
     end: '2023-08',
     summary:
-      'Consulted for Fortune 500 clients in tourism, automotive, and beverages. Used customer segmentation to shape targeted marketing, built time series forecasts, and applied NLP to patient-doctor data for a healthcare client. Later built Bayesian marketing mix models to show where marketing budget actually paid off.',
-    tags: ['Segmentation', 'Forecasting', 'NLP', 'Marketing Mix'],
+      'Consulted for Fortune 500 clients across multiple industries. Used customer segmentation to shape targeted marketing, built time series forecasts, and applied NLP to patient-doctor data for a healthcare client. Built Bayesian marketing mix models to show where marketing budget actually paid off.',
+    tags: ['Segmentation', 'Forecasting', 'Marketing Mix', 'Supervised ML', 'Unsupervised ML', 'NLP', 'Time Series', 'Statistical Modeling / Testing'],
   },
 ];
 
@@ -114,7 +114,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     headline: 'Published research on Hausdorff-distance object detection',
     body:
       'Published research proposing a Hungarian-free object detector built on Hausdorff distance refinement, with ablations across 98 mAP detection scenarios.',
-    link: { label: 'Read the paper', href: 'https://scholar.google.com/scholar?q=Object+Detection+Hausdorff+distance+Bhadane' },
+    link: { label: 'Read the paper', href: 'https://www.irjet.net/archives/V7/i4/IRJET-V7I416.pdf' },
   },
 ];
 
